@@ -25,7 +25,7 @@ echo "== Téléchargement de l'image Docker: $DOCKER_IMAGE =="
 docker pull $DOCKER_IMAGE
 
 # Lancement du conteneur
-echo "== Lancement du conteneur =="
+#echo "== Lancement du conteneur =="
 docker run -d --name mon_conteneur -p 80:80 $DOCKER_IMAGE
 
-echo "== Installation et déploiement terminés =="
+#echo "== Installation et déploiement terminés =="
