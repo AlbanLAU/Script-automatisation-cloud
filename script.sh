@@ -18,7 +18,7 @@ echo \
 # Installation de Docker
 sudo apt-get update
 sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
-
+sudo dpkg --configure -a
 # Récupération de l'image depuis Docker Hub
 DOCKER_IMAGE="jesperberth/pacman"
 echo "== Téléchargement de l'image Docker: $DOCKER_IMAGE =="
