@@ -35,10 +35,10 @@ sudo systemctl enable docker
 echo "Ajout de l'utilisateur actuel au groupe Docker pour éviter sudo..."
 sudo usermod -aG docker $USER
 
-echo "Récupération de l'image jesperberth/pacman depuis Docker Hub..."
-docker pull boudake/snake || { echo "Échec du téléchargement de l'image Docker."; exit 1; }
+echo "Récupération de l'image blackicebird/2048 depuis Docker Hub..."
+docker pull blackicebird/2048 || { echo "Échec du téléchargement de l'image Docker."; exit 1; }
 
 echo "Exécution du conteneur Docker..."
-docker run --name pacman -p 80:8080 -d boudake/snake || { echo "Échec de l'exécution du conteneur Docker."; exit 1; }
+docker run --name pacman -p 80:8080 -d blackicebird/2048 || { echo "Échec de l'exécution du conteneur Docker."; exit 1; }
 
 echo "Le conteneur 'snake' est en cours d'exécution. Vous pouvez y accéder sur http://localhost."
