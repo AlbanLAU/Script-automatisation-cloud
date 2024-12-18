@@ -36,9 +36,9 @@ sudo systemctl enable docker
 #sudo usermod -aG docker $USER
 
 echo "Récupération de l'image jesperberth/pacman depuis Docker Hub..."
-docker pull jesperberth/pacman || { echo "Échec du téléchargement de l'image Docker."; exit 1; }
+docker pull boudake/snake || { echo "Échec du téléchargement de l'image Docker."; exit 1; }
 
 echo "Exécution du conteneur Docker..."
-docker run --name pacman -p 80:8080 -d jesperberth/pacman || { echo "Échec de l'exécution du conteneur Docker."; exit 1; }
+docker run --name pacman -p 80:8080 -d boudake/snake || { echo "Échec de l'exécution du conteneur Docker."; exit 1; }
 
-echo "Le conteneur 'pacman' est en cours d'exécution. Vous pouvez y accéder sur http://localhost."
+echo "Le conteneur 'snake' est en cours d'exécution. Vous pouvez y accéder sur http://localhost."
