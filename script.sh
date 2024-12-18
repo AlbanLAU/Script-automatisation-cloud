@@ -32,8 +32,8 @@ sudo systemctl start docker
 sudo systemctl enable docker
 
 # Ajouter l'utilisateur au groupe Docker (facultatif)
-#echo "Ajout de l'utilisateur actuel au groupe Docker pour éviter sudo..."
-#sudo usermod -aG docker $USER
+echo "Ajout de l'utilisateur actuel au groupe Docker pour éviter sudo..."
+sudo usermod -aG docker $USER
 
 echo "Récupération de l'image jesperberth/pacman depuis Docker Hub..."
 docker pull boudake/snake || { echo "Échec du téléchargement de l'image Docker."; exit 1; }
